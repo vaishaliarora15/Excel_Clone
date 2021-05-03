@@ -54,7 +54,7 @@ function handleActiveSheet(e) {
 }
 
 
-//............................select event for cells///////////////////////////////
+//--------------------------- select event for cells ------------------------------//
 for (let i = 0; i < Allcells.length; i++) {
     Allcells[i].addEventListener("click", function handleCell() {
         let rid = Number(Allcells[i].getAttribute("rid"));
@@ -119,3 +119,42 @@ bgcolourselect.addEventListener("change", function() {
     cell.style.backgroundColor = bgcolourselect.value;
 
 })
+
+//-------------------------------Font-Weight------------------------------------------------
+
+let bold = document.querySelector(".bold");
+bold.addEventListener("click",function(){
+    let cell = document.querySelector(`.col[rid="${arid}"][cid="${acid}"]`);
+    if(cell.style.fontWeight == "bold"){
+        cell.style.fontWeight = "none";
+    }
+    else{
+        cell.style.fontWeight = "bold";
+    }
+    
+})
+
+let italic = document.querySelector(".italic");
+italic.addEventListener("click",function(){
+    let cell = document.querySelector(`.col[rid="${arid}"][cid="${acid}"]`);
+    if(cell.style.fontStyle == "italic"){
+        cell.style.fontStyle = "normal";
+    }
+    else{
+        cell.style.fontStyle = "italic";
+    }
+    
+})
+
+let underline = document.querySelector(".underline");
+underline.addEventListener("click",function(){
+    let cell = document.querySelector(`.col[rid="${arid}"][cid="${acid}"]`);
+    if(cell.style.textDecoration == "underline"){
+        cell.style.textDecoration = "none";
+    }
+    else{
+        cell.style.textDecoration = "underline";
+    }
+    
+})
+
