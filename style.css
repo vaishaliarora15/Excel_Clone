@@ -154,7 +154,7 @@ body {
 /* **************************************sheet******************************** */
 
 .sheets {
-    background-color: rgb(132, 214, 214);
+    background-color: rgb(6, 90, 90);
     height: 50px;
     display: flex;
 }
@@ -190,4 +190,8 @@ body {
 
 .active-sheet {
     background-color: wheat;
+}
+
+.active-btn {
+    background-color: rgb(210, 243, 183);
 }
